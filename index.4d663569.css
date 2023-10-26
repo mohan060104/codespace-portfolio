@@ -8,6 +8,10 @@ html, body {
   overflow-x: hidden;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 div#main {
   width: 100vw;
   flex-direction: column;
@@ -27,6 +31,10 @@ section.padding {
   padding: 5rem 0;
 }
 
+#portfolio {
+  background-color: #f7f7f7;
+}
+
 section img.background {
   height: 100%;
   object-fit: cover;
@@ -40,6 +48,7 @@ section img.background {
 }
 
 h1 {
+  color: #dcdcdc;
   margin: 0;
   font-family: Cormorant Garamond, serif;
   font-size: 7rem;
@@ -116,6 +125,43 @@ a:hover {
 img.socialIcon {
   height: 30px;
   width: 30px;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cell {
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin: 20px auto;
+  padding: 24px 16px;
+  display: flex;
+}
+
+#after-name {
+  color: #faebd7;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
